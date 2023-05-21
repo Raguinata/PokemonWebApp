@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.pokemon-nome {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.pokemon-tipos {
+    color: #666;
+}
