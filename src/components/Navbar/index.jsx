@@ -4,7 +4,6 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import PokemonLogo from './Imagens/LogoPokemon.png'
@@ -22,6 +21,8 @@ const Search = styled('div')(({ theme }) => ({
         marginLeft: theme.spacing(1),
         width: 'auto',
     },
+    display: 'flex', // Adicionado
+    alignItems: 'center', // Adicionado
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -32,7 +33,10 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    top: 0, // Adicionado
+    left: 0, // Adicionado
 }));
+
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',

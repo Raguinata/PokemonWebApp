@@ -1,12 +1,9 @@
-import React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Box, CardActionArea } from '@mui/material';
+import React, { useState } from 'react';
 import './style.css'; // Importando o arquivo de estilos CSS
 
 export default function PokemonCard({ name, image, types }) {
+    const [isHovered, setIsHovered] = useState(false); // Estado para controlar o hover
+
     const nomeMaiusculo = name.charAt(0).toUpperCase() + name.slice(1); // Transforma a primeira letra do nome em maiúscula
 
     const tipos = () => {
@@ -16,34 +13,27 @@ export default function PokemonCard({ name, image, types }) {
         return types[0].type.name;
     };
 
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
     return (
-        <Card className="pokemon-card" sx={{ maxWidth: 345,
-        borderRadius: 5,
-        backgroundColor: 'black',
-        border: '2px solid white'
-        }}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height="170"
-                    image={image}
-                    alt={nomeMaiusculo}
-                />
-                <CardContent>
-                    <Box
-                        display="flex"
-                        justifyContent="space-between"
-                        alignItems="center"
-                    >
-                        <Typography className="pokemon-nome" gutterBottom variant="h5" component="div">
-                            {nomeMaiusculo}
-                        </Typography>
-                        <Typography className="pokemon-tipos" variant="caption" component="div">
-                            {tipos()}
-                        </Typography>
-                    </Box>
-                </CardContent>
-            </CardActionArea>
-        </Card>
+        <div
+            className={`pokemon-card ${isHovered ? 'hovered' : ''}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            <div className="pokemon-card-conteudo-img">
+                <img src={image} alt={nomeMaiusculo} height="170" />
+            </div>
+            <div className="pokemon-card-conteudo-nome-tipo">
+                <h5>{nomeMaiusculo}</h5>
+                <h6>{tipos()}</h6>
+            </div>
+        </div>
     );
 }

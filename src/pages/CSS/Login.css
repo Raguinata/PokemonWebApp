@@ -1,0 +1,166 @@
+.login-div-principal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(18, 18, 20);
+  overflow: hidden; /* Impede que haja barra de rolagem vertical */
+}
+
+
+.login-div-direito {
+  margin-top: 2%;
+  width: 40%;
+  height: 90%;
+  background-color: rgb(255, 247, 210);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-bottom-right-radius: 135px;
+  border-top-right-radius: 135px;
+}
+
+.login-div-esquerdo {
+  width: 60%;
+  height: 100%;
+  background-color: rgb(18, 18, 20);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-div-conteudo-direito {
+  margin: 5%;
+  width: 90%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.login-div-conteudo-esquerdo{
+  bottom: 10%;
+  position: relative;
+  width: 60%;
+  height: 67%;
+  background-color: rgb(255, 247, 210);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 35px;
+  z-index: 1;
+}
+
+.login-img-pikachu {
+  width: 60%;
+}
+
+.login-label {
+  display: block;
+  color: black;
+  margin-bottom: 5px;
+  font-family: 'Chakra Petch', Courier, monospace;
+  font-weight: 700;
+}
+
+.login-input {
+  font-family: 'Chakra Petch', Courier, monospace;
+  font-weight: 300;
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 20px;
+}
+
+.login-img-logo-pokedex{
+  width: 40%;
+  position: relative;
+  bottom: 2%;
+  z-index: 2;
+}
+
+.login-form{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  color: black;
+  font-weight: bold;
+  font-size: 29px;
+}
+
+button {
+  margin-top: 20px;
+  width: 290px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: 'Chakra Petch', Courier, monospace;
+  font-weight: 300;
+}
+
+button:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+button:active {
+  color: #000;
+}
+
+button:active:after {
+  background: transparent;
+}
+
+button:hover:before {
+  opacity: 1;
+}
+
+button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+      background-position: 0 0;
+  }
+  50% {
+      background-position: 400% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
+}

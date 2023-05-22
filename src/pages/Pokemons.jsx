@@ -1,4 +1,4 @@
-import './style.css';
+import './CSS/Pokemons.css';
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import PokemonCard from '../components/PokemonCard'
