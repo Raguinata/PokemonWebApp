@@ -95,7 +95,7 @@ label {
   font-size: 29px;
 }
 
-button {
+.btn-paginas {
   margin-top: 20px;
   width: 290px;
   height: 50px;
@@ -112,7 +112,7 @@ button {
   font-weight: 300;
 }
 
-button:before {
+.btn-paginas:before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
@@ -129,19 +129,19 @@ button:before {
   border-radius: 10px;
 }
 
-button:active {
+.btn-paginas:active {
   color: #000;
 }
 
-button:active:after {
+.btn-paginas:active:after {
   background: transparent;
 }
 
-button:hover:before {
+.btn-paginas:hover:before {
   opacity: 1;
 }
 
-button:after {
+.btn-paginas:after {
   z-index: -1;
   content: '';
   position: absolute;

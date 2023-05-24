@@ -7,6 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import PokemonLogo from './Imagens/LogoPokemon.png'
+import { Button } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -55,22 +56,34 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export default function Navbar({pokemonFiltro}) {
+export default function Navbar({ pokemonFiltro, esconderPesquisa }) {
     return (
         <Box sx={{ flexGrow: 1, marginBottom: "2em" }}>
-            <AppBar position="static" sx={{backgroundColor: 'black'}}>
+            <AppBar position="static" sx={{ backgroundColor: 'black' }}>
                 <Toolbar>
                     <Box className='navbar-conteudo'>
-                    <Box component="img" src={PokemonLogo} height="3em"/>
-                    <Search onChange={(e) => pokemonFiltro(e.target.value)}>
-                        <SearchIconWrapper>
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Pesquisando…"
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </Search>
+                        <a href='/'>
+                            <Box component="img" src={PokemonLogo} height="3em" />
+                        </a>
+                        <Box sx={{ display: 'flex', width: "100%" }}>
+                            <a href='/pokemons'>
+                                <button className='navbar navbar-btn' type="submit">Pokémons</button>
+                            </a>
+                            <a href='/pokemons'>
+                                <button className='navbar navbar-btn' type="submit">Minha Coleção</button>
+                            </a>
+                        </Box>
+                        {!esconderPesquisa && (
+                        <Search onChange={(e) => pokemonFiltro(e.target.value)}>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Pesquisando…"
+                                inputProps={{ 'aria-label': 'search' }}
+                            />
+                        </Search>
+                    )}
                     </Box>
                 </Toolbar>
             </AppBar>

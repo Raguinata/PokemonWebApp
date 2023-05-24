@@ -54,7 +54,7 @@ function Cadastro() {
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
-                        <button type="submit">Cadastrar</button>
+                        <button className='btn-paginas' type="submit">Cadastrar</button>
                     </form>
                 </div>
             </div>

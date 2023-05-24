@@ -2,12 +2,15 @@ import './CSS/Pokemons.css';
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import PokemonCard from '../components/PokemonCard'
-import { Container, Grid, Skeleton } from '@mui/material'
+import { Box, Container, Grid, Skeleton } from '@mui/material'
 import axios from 'axios'
 import { Skeletons } from '../components/Skeletons/indes';
+import { useNavigate } from 'react-router-dom';
 
-export const Pokemons = () => {
+export const Pokemons = ({ setPokemonData }) => {
   const [pokemons, setPokemons] = useState([]);
+  const navigate = useNavigate();
+  
   useEffect(() => {
     getPokemons()
   }, []);
@@ -36,6 +39,11 @@ export const Pokemons = () => {
     }
   }
 
+  const pokemonPickHandler = (pokemonData) => {
+    setPokemonData(pokemonData);
+    navigate("/perfilPokemon");
+  }
+
   return (
     <div className='pokemons pokemons-div-principal'>
       <Navbar pokemonFiltro={pokemonFiltro} />
@@ -46,7 +54,9 @@ export const Pokemons = () => {
           ) : (
             pokemons.map((pokemon, key) => (
               <Grid item xs={12} sm={6} md={4} lg={2} key={key}>
+                <Box onClick={() => pokemonPickHandler(pokemon.data)}>
                   <PokemonCard name={pokemon.data.name} image={pokemon.data.sprites.front_default} types={pokemon.data.types} />
+                </Box>
               </Grid>
             ))
           )}

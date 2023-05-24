@@ -19,7 +19,7 @@ function Erro() {
                         <img className='erro erro-img-setas' src={setas} />
                         <div className='erro erro-div-botao'>
                             <a href="/">
-                            <button type="button">CLIQUE AQUI!!!</button>
+                            <button className='btn-paginas' type="button">CLIQUE AQUI!!!</button>
                             </a>
                         </div>
                     </div>

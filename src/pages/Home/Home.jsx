@@ -24,7 +24,7 @@ function Home() {
         
 
         <div className='home home-div-principal'>
-            <Navbar/>
+            <Navbar esconderPesquisa/>
 
             <div className='home home-div-conteudo-top'>
 

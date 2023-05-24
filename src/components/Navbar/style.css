@@ -1,5 +1,17 @@
-.navbar-conteudo{
+.navbar-conteudo {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.navbar-btn {
+    margin-left: 30px;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
