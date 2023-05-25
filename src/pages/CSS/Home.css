@@ -26,7 +26,7 @@ h4 {
     color: white;
 }
 
-p{
+p {
     color: #002153;
     text-align: center;
 }
@@ -38,12 +38,13 @@ p{
 }
 
 .home-div-conteudo-top {
-    
+
     text-align: center;
-    padding: 20px; /* Altera a margem de todo conteudo */
+    padding: 20px;
+    /* Altera a margem de todo conteudo */
 }
 
-.home-div-pokemons-populares{
+.home-div-pokemons-populares {
     width: 81.38%;
     height: 250px;
     background-color: rgba(0, 0, 0, 0.207);
@@ -53,7 +54,7 @@ p{
     display: flex;
 }
 
-.home-div-pokemons-populares-top1{
+.home-div-pokemons-populares-top1 {
     width: 20%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -61,25 +62,25 @@ p{
     border-right: 2px solid white;
 }
 
-.home-div-pokemons-populares-top2{
+.home-div-pokemons-populares-top2 {
     width: 20%;
     height: 100%;
     border-right: 2px solid white;
 }
 
-.home-div-pokemons-populares-top3{
+.home-div-pokemons-populares-top3 {
     width: 20%;
     height: 100%;
     border-right: 2px solid white;
 }
 
-.home-div-pokemons-populares-top4{
+.home-div-pokemons-populares-top4 {
     width: 20%;
     height: 100%;
     border-right: 2px solid white;
 }
 
-.home-div-pokemons-populares-top5{
+.home-div-pokemons-populares-top5 {
     width: 20%;
     height: 100%;
     border-top-right-radius: 15px;
@@ -104,17 +105,17 @@ p{
     bottom: 19%;
 }
 
-.home-img-medalha{
+.home-img-medalha {
     width: 50px;
     height: auto;
     display: flex;
 }
 
-.home-img-charizard{
+.home-img-charizard {
     width: 90%;
 }
 
-.home-img-gengar{
+.home-img-gengar {
     width: 88%;
 }
 
@@ -132,59 +133,265 @@ p{
 
 /* NOTICIAS */
 
-.home-div-conteudo-noticias{
+.home-div-conteudo-noticias {
     text-align: center;
-    padding: 20px; /* Altera a margem de todo conteudo */
+    padding: 20px;
+    /* Altera a margem de todo conteudo */
 }
 
-.home-div-noticias{
+.home-div-noticias {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     align-content: flex-start;
-    
+
 }
 
-.home-img-noticia{
+.home-img-noticia {
     width: 70%;
 }
 
-.home-div-noticias-1{
+.home-div-noticias-1 {
     background-color: rgba(66, 129, 231, 0.322);
     border: 2px solid white;
     width: 30%;
     margin-bottom: 3%;
 }
 
-.home-div-noticias-2{
+.home-div-noticias-2 {
     background-color: rgb(241, 174, 190, 0.322);
     border: 2px solid white;
     width: 30%;
     margin-bottom: 3%;
 }
 
-.home-div-noticias-3{
-    background-color:  rgb(224, 155, 210, 0.322);
+.home-div-noticias-3 {
+    background-color: rgb(224, 155, 210, 0.322);
     border: 2px solid white;
     width: 30%;
     margin-bottom: 3%;
 }
 
-.home-div-noticias-4{
+.home-div-noticias-4 {
     background-color: rgb(176, 225, 255, 0.322);
     border: 2px solid white;
     width: 30%;
 }
 
-.home-div-noticias-5{
+.home-div-noticias-5 {
     background-color: rgb(191, 220, 234, 0.322);
     border: 2px solid white;
     width: 30%;
 }
 
-.home-div-noticias-6{
+.home-div-noticias-6 {
     background-color: rgb(240, 228, 130, 0.322);
     border: 2px solid white;
     width: 30%;
+}
+
+/* Estilos para telas entre 2500px e 3000px de largura */
+@media screen and (min-width: 2500px) and (max-width: 3000px) {
+    /* Imagens Pokémons */
+    .home-img-charizard {
+        width: 45%;
+    }
+    
+    .home-img-gengar {
+        width: 44%;
+    }
+    
+    .home-img-bulbasaur {
+        width: 40.5%;
+    }
+    
+    .home-img-blaziken {
+        width: 32%;
+    }
+    
+    .home-img-umbreon {
+        width: 36%;
+    }
+
+    /* Letreiro */
+
+    .home-h2-top5 {
+        position: relative;
+        left: 7%;
+        bottom: 19%;
+        font-size: 32px;
+    }
+}
+
+/* Estilos para telas entre 2000px e 2499px de largura */
+@media screen and (min-width: 2000px) and (max-width: 2499px) {
+    /* Imagens Pokémons */
+    .home-img-charizard {
+        width: 54%;
+    }
+    
+    .home-img-gengar {
+        width: 53%;
+    }
+    
+    .home-img-bulbasaur {
+        width: 49%;
+    }
+    
+    .home-img-blaziken {
+        width: 38%;
+    }
+    
+    .home-img-umbreon {
+        width: 44%;
+    }
+}
+
+/* Estilos para telas entre 1510px e 1999px de largura */
+@media screen and (min-width: 1510px) and (max-width: 1999px) {
+    /* Imagens Pokémons */
+    .home-img-charizard {
+        width: 68%;
+    }
+    
+    .home-img-gengar {
+        width: 67%;
+    }
+    
+    .home-img-bulbasaur {
+        width: 62%;
+    }
+    
+    .home-img-blaziken {
+        width: 49%;
+    }
+    
+    .home-img-umbreon {
+        width: 55%;
+    }
+}
+
+/* Estilos para telas entre 1600px e 1200px de largura */
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    /* Imagens Pokémons */
+    .home-img-charizard {
+        width: 100%;
+    }
+    
+    .home-img-gengar {
+        width: 100%;
+    }
+    
+    .home-img-bulbasaur {
+        width: 93%;
+    }
+    
+    .home-img-blaziken {
+        width: 80%;
+    }
+    
+    .home-img-umbreon {
+        width: 90%;
+    }
+
+    /* Letreiro */
+
+    .home-h2-top5 {
+        position: relative;
+        left: 7%;
+        bottom: 19%;
+        font-size: 21px;
+    }
+}
+
+/* Estilos para telas entre 850px e 999px de largura */
+@media screen and (min-width: 850px) and (max-width: 999px) {
+    /* Imagens Pokémons */
+    .home-img-charizard {
+        width: 92%;
+    }
+    
+    .home-img-gengar {
+        width: 89%;
+    }
+    
+    .home-img-bulbasaur {
+        width: 83%;
+    }
+    
+    .home-img-blaziken {
+        width: 64%;
+    }
+    
+    .home-img-umbreon {
+        width: 74%;
+    }
+
+    .home-div-pokemons-populares {
+        width: 813.80px;
+        height: 81.38%;
+        background-color: rgba(0, 0, 0, 0.207);
+        border-radius: 15px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        border: none;
+        border-left: 2px solid white;
+    }
+
+    .home-div-pokemons-populares-top1 {
+        width: 24.7%;
+        height: 212.72px;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .home-div-pokemons-populares-top2 {
+        width: 24.7%;
+        height: 212.72px;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+    }
+    
+    .home-div-pokemons-populares-top3 {
+        width: 24.7%;
+        height: 212.72px;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+    }
+    
+    .home-div-pokemons-populares-top4 {
+        width: 24.7%;
+        height: 212.72px;
+        border-bottom: 2px solid white;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top: 2px solid white;
+    }
+    
+    .home-div-pokemons-populares-top5 {
+        width: 24.7%;
+        height: 212.72px;
+        border: 2px solid white;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0px;
+        border-left: none;
+        border-top: none;
+        
+    }
+    
+    .home-div-pokemons-linha {
+        position: absolut;
+        background-color: transparent;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        
+    }
 }
