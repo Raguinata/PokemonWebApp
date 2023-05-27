@@ -57,3 +57,171 @@
 }
 
 
+/* Estilos para telas entre 4000px e 4500px de largura */
+@media screen and (min-width: 5000px) and (max-width: 6000px) {
+    
+    .erro-div-conteudo h1 {
+        font-size: 64px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .erro-img-snorlax-erro {
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .erro-img-setas {
+        width: 100%;
+        max-width: 650px;
+        margin-top: 10px;
+    }
+    
+    .erro-h2 {
+        color: black;
+        font-family: 'Chakra Petch', Courier, monospace;
+        font-weight: 300;
+        font-size: 60px;
+    }
+
+    .btn-paginas {
+        width: 80%;
+        height: 140px;
+        font-size: 60px;
+    }
+
+}
+
+/* Estilos para telas entre 4000px e 4500px de largura */
+@media screen and (min-width: 4000px) and (max-width: 5000px) {
+    
+    .erro-div-conteudo h1 {
+        font-size: 54px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .erro-img-snorlax-erro {
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .erro-img-setas {
+        width: 100%;
+        max-width: 650px;
+        margin-top: 10px;
+    }
+    
+    .erro-h2 {
+        color: black;
+        font-family: 'Chakra Petch', Courier, monospace;
+        font-weight: 300;
+        font-size: 50px;
+    }
+
+    .btn-paginas {
+        width: 70%;
+        height: 100px;
+        font-size: 40px;
+    }
+
+}
+
+/* Estilos para telas entre 3500px e 4000px de largura */
+@media screen and (min-width: 3500px) and (max-width: 4000px) {
+    
+    .erro-div-conteudo h1 {
+        font-size: 44px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .erro-img-snorlax-erro {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .erro-img-setas {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 10px;
+    }
+    
+    .erro-h2 {
+        color: black;
+        font-family: 'Chakra Petch', Courier, monospace;
+        font-weight: 300;
+        font-size: 40px;
+    }
+
+    .btn-paginas {
+        width: 60%;
+        height: 80px;
+        font-size: 30px;
+    }
+
+}
+
+/* Estilos para telas entre 3000px e 3500px de largura */
+@media screen and (min-width: 3000px) and (max-width: 3500px) {
+    
+    .erro-div-conteudo h1 {
+        font-size: 44px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .erro-img-snorlax-erro {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .erro-img-setas {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 10px;
+    }
+    
+    .erro-h2 {
+        color: black;
+        font-family: 'Chakra Petch', Courier, monospace;
+        font-weight: 300;
+        font-size: 40px;
+    }
+
+    .btn-paginas {
+        width: 60%;
+        height: 80px;
+        font-size: 30px;
+    }
+
+}
+
+/* Estilos para telas entre 2500px e 3000px de largura */
+@media screen and (min-width: 2500px) and (max-width: 3000px) {
+    
+    .erro-div-conteudo h1 {
+        font-size: 34px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .erro-img-snorlax-erro {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .erro-img-setas {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 10px;
+    }
+    
+    .erro-h2{
+        color: black;
+        font-family: 'Chakra Petch', Courier, monospace;
+        font-weight: 300;
+        font-size: 30px;
+    }
+}
+

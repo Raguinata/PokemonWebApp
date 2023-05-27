@@ -81,86 +81,211 @@
   z-index: 2;
 }
 
-.login-form{
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+/* Estilos para telas entre 4000px e 4500px de largura */
+@media screen and (min-width: 5000px) and (max-width: 6000px) {
 
-label {
-  color: black;
-  font-weight: bold;
-  font-size: 29px;
-}
-
-.btn-paginas {
-  margin-top: 20px;
-  width: 290px;
-  height: 50px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  font-size: 18px;
-  font-family: 'Chakra Petch', Courier, monospace;
-  font-weight: 300;
-}
-
-.btn-paginas:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-.btn-paginas:active {
-  color: #000;
-}
-
-.btn-paginas:active:after {
-  background: transparent;
-}
-
-.btn-paginas:hover:before {
-  opacity: 1;
-}
-
-.btn-paginas:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #111;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-@keyframes glowing {
-  0% {
-      background-position: 0 0;
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 200px;
   }
-  50% {
-      background-position: 400% 0;
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    width: 100%;
+    height: 150px;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 100px;
   }
-  100% {
-      background-position: 0 0;
+
+  .login-div-form{
+    width: 90%;
+    align-items: center;
+    justify-content: center;
   }
+  
+  .login-div-conteudo-esquerdo h4{
+    font-size: 45px;
+  }
+
+  .login-div-conteudo-esquerdo .btn-paginas{
+    height: 150px;
+  }
+
 }
+
+/* Estilos para telas entre 4000px e 4500px de largura */
+@media screen and (min-width: 4000px) and (max-width: 5000px) {
+
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 200px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    width: 100%;
+    height: 150px;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 100px;
+  }
+
+  .login-div-form{
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-conteudo-esquerdo h4{
+    font-size: 45px;
+  }
+
+  .login-div-conteudo-esquerdo .btn-paginas{
+    height: 150px;
+    font-size: 100px;
+  }
+
+}
+
+/* Estilos para telas entre 3500px e 4000px de largura */
+@media screen and (min-width: 3500px) and (max-width: 4000px) {
+    
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 130px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    width: 100%;
+    height: 100px;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 80px;
+  }
+
+  .login-div-form{
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-conteudo-esquerdo h4{
+    font-size: 40px;
+  }
+
+  .login-div-conteudo-esquerdo .btn-paginas{
+    height: 150px;
+    font-size: 100px;
+  }
+
+}
+
+/* Estilos para telas entre 3000px e 3500px de largura */
+@media screen and (min-width: 3000px) and (max-width: 3500px) {
+    
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 100px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    width: 100%;
+    height: 100px;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 60px;
+  }
+
+  .login-div-form{
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-conteudo-esquerdo h4{
+    font-size: 30px;
+  }
+
+  .login-div-conteudo-esquerdo .btn-paginas{
+    height: 100px;
+    font-size: 60px;
+  }
+
+}
+
+/* Estilos para telas entre 2500px e 3000px de largura */
+@media screen and (min-width: 2500px) and (max-width: 3000px) {
+    
+}
+
+/* Estilos para telas entre 2000px e 2500px de largura */
+@media screen and (min-width: 2000px) and (max-width: 2500px) {
+    
+}
+
+/* Estilos para telas entre 1540px e 2000px de largura */
+@media screen and (min-width: 1540px) and (max-width: 2000px) {
+    
+}
+
+/* Estilos para telas entre 1600px e 1200px de largura */
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    
+}
+
+/* Estilos para telas entre 850px e 1000px de largura */
+@media screen and (min-width: 850px) and (max-width: 1000px) {
+    
+}
+
+/* Estilos para telas entre 650px e 850px de largura */
+@media screen and (min-width: 650px) and (max-width: 850px) {
+    
+}
+
+/* Estilos para telas entre 500px e 650px de largura */
+@media screen and (min-width: 500px) and (max-width: 650px) {
+
+}
+
+/* Estilos para telas entre 320px e 500px de largura */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    
+}
+
+/* Estilos para telas entre 0px e 320px de largura */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    
+}
+

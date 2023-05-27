@@ -45,9 +45,15 @@ function Login() {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-                        <button type="submit" className="btn-paginas">
-                            Login
-                        </button>
+                        <div className='login login-div-btn'>
+                        <button type="submit" className="btn-paginas">Login</button>
+                        <a>
+                            <h4 style={{ cursor: "pointer" }}>Esqueci minha senha</h4>
+                        </a>
+                        <a>
+                            <h4 style={{ cursor: "pointer" }}>Ainda não possuo uma conta</h4>
+                        </a>
+                        </div>
                     </form>
                 </div>
             </div>

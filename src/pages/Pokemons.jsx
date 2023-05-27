@@ -6,6 +6,7 @@ import { Box, Container, Grid, Skeleton } from '@mui/material'
 import axios from 'axios'
 import { Skeletons } from '../components/Skeletons/indes';
 import { useNavigate } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 export const Pokemons = ({ setPokemonData }) => {
   const [pokemons, setPokemons] = useState([]);
@@ -44,25 +45,44 @@ export const Pokemons = ({ setPokemonData }) => {
     navigate("/perfilPokemon");
   }
 
+  const theme = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 3500,
+      },
+    },
+  });
+  
+
   return (
-    <div className='pokemons pokemons-div-principal'>
-      <Navbar pokemonFiltro={pokemonFiltro} />
-      <Container maxWidth="false">
-      <Grid container spacing={3}>
-          {pokemons.length === 0 ? (
-            <Skeletons />
-          ) : (
-            pokemons.map((pokemon, key) => (
-              <Grid item xs={12} sm={6} md={4} lg={2} key={key}>
-                <Box onClick={() => pokemonPickHandler(pokemon.data)}>
-                  <PokemonCard name={pokemon.data.name} image={pokemon.data.sprites.front_default} types={pokemon.data.types} />
-                </Box>
-              </Grid>
-            ))
-          )}
-        </Grid>
-      </Container>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className='pokemons pokemons-div-principal'>
+        <Navbar pokemonFiltro={pokemonFiltro} />
+        <Container maxWidth="false">
+          <Grid container spacing={3}>
+            {pokemons.length === 0 ? (
+              <Skeletons />
+            ) : (
+              pokemons.map((pokemon, key) => (
+                <Grid item xs={12} sm={6} md={4} lg={2} xl={1} key={key}>
+                  <Box onClick={() => pokemonPickHandler(pokemon.data)}>
+                    <PokemonCard
+                      name={pokemon.data.name}
+                      image={pokemon.data.sprites.front_default}
+                      types={pokemon.data.types}
+                    />
+                  </Box>
+                </Grid>
+              ))
+            )}
+          </Grid>
+        </Container>
+      </div>
+    </ThemeProvider>
 
   )
 }
