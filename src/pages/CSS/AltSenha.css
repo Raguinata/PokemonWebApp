@@ -1,4 +1,4 @@
-.cadastro-div-principal {
+.altSenha-div-principal {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,11 +7,11 @@
     /* Impede que haja barra de rolagem vertical */
 }
 
-.cadastro-div-direito {
+.altSenha-div-direito {
     margin-top: 2%;
     width: 40%;
     height: 90%;
-    background-color: rgb(248, 192, 200);
+    background-color: rgb(49, 90, 123);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -19,7 +19,7 @@
     border-top-right-radius: 135px;
 }
 
-.cadastro-div-esquerdo {
+.altSenha-div-esquerdo {
     width: 60%;
     height: 100%;
     background-color: rgb(18, 18, 20);
@@ -29,7 +29,7 @@
     flex-direction: column;
 }
 
-.cadastro-div-conteudo-direito {
+.altSenha-div-conteudo-direito {
     margin: 5%;
     width: 90%;
     height: 90%;
@@ -38,12 +38,12 @@
     display: flex;
 }
 
-.cadastro-div-conteudo-esquerdo {
+.altSenha-div-conteudo-esquerdo {
     bottom: 10%;
     position: relative;
     width: 60%;
     height: 67%;
-    background-color: rgb(248, 192, 200);
+    background-color: rgb(49, 90, 123);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -51,12 +51,12 @@
     z-index: 1;
 }
 
-.cadastro-img {
+.altSenha-img {
     width: 55%;
     transform: scaleX(-1);
 }
 
-.cadastro-label {
+.altSenha-label {
     display: block;
     color: black;
     margin-bottom: 5px;
@@ -64,7 +64,7 @@
     font-weight: 700;
 }
 
-.cadastro-input {
+.altSenha-input {
     font-family: 'Chakra Petch', Courier, monospace;
     font-weight: 300;
     width: 100%;
@@ -75,7 +75,7 @@
     font-size: 20px;
 }
 
-.cadastro-img-logo-pokedex {
+.altSenha-img-logo-pokedex {
     width: 40%;
     position: relative;
     bottom: 2%;

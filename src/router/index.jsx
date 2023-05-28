@@ -6,6 +6,7 @@ import Home from '../pages/Home/Home'
 import Login from '../pages/Login/Login'
 import Cadastro from '../pages/Cadastro/Cadastro'
 import Erro from '../pages/Erro/Erro'
+import AltSenha from '../pages/AltSenha/AltSenha'
 
 export const Router = () => {
   const [pokemonData, setPokemonData] = useState();
@@ -16,6 +17,7 @@ export const Router = () => {
         <Route path='/*' element={<Erro />} />
         <Route path='/login' element={<Login />} />
         <Route path='/cadastro' element={<Cadastro />} />
+        <Route path='/alterarSenha' element={<AltSenha/>} />
         <Route path='/pokemons' element={<Pokemons setPokemonData={setPokemonData}/>} />
         <Route path='/perfilPokemon' element={<PerfilPokemon pokemonData={pokemonData}/>} />
       </Routes>

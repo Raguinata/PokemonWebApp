@@ -22,10 +22,11 @@ function Login() {
             <div className='login login-div-esquerdo'>
             <img className='login login-img-logo-pokedex' src={logoPokedex} alt="Pikachu Login" />
                 <div className='login login-div-conteudo-esquerdo'>
+                    <div className='login login-div-tudo-esquerdo'>
                 
-                    <form  onSubmit={handleSubmit}>
+                    <form className='login login-div-form' onSubmit={handleSubmit}>
                         
-                        <div className="login login-div-form">
+                        
                             <label className='login login-label' htmlFor="username">Username</label>
                             <input
                                 className='login login-input'
@@ -34,8 +35,8 @@ function Login() {
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                             />
-                        </div>
-                        <div  className="login-div-form">
+                        
+                        
                             <label className='login login-label' htmlFor="password">Senha</label>
                             <input
                                 className='login login-input'
@@ -44,17 +45,18 @@ function Login() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                        </div>
+                        
                         <div className='login login-div-btn'>
                         <button type="submit" className="btn-paginas">Login</button>
-                        <a>
+                        <a href='/alterarSenha'>
                             <h4 style={{ cursor: "pointer" }}>Esqueci minha senha</h4>
                         </a>
-                        <a>
+                        <a href='/cadastro'>
                             <h4 style={{ cursor: "pointer" }}>Ainda não possuo uma conta</h4>
                         </a>
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
