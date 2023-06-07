@@ -1,0 +1,43 @@
+.pokemon-card {
+    position: relative;
+    max-width: 345px;
+    border-radius: 15px;
+    background-color: black;
+    border: 2px solid white;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.pokemon-card.hovered {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pokemon-card-conteudo-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: auto;
+}
+
+.pokemon-card-conteudo-nome-tipo {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    margin: 10px;
+}
+
+.pokemon-card-conteudo-nome-tipo h6 {
+    color: #666;
+    font-weight: 500;
+}
+
+.pokemon-card-btn-img{
+    width: 20%;
+}
