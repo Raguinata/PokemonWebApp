@@ -1,0 +1,526 @@
+.login-div-principal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(18, 18, 20);
+  overflow: hidden;
+}
+
+.login-div-tudo-esquerdo {
+  width: 80%;
+  height: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-div-form {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-div-direito {
+  margin-top: 2%;
+  width: 40%;
+  height: 90%;
+  background-color: rgb(255, 247, 210);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-bottom-right-radius: 135px;
+  border-top-right-radius: 135px;
+}
+
+.login-div-esquerdo {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  top: 10%;
+  background-color: rgb(18, 18, 20);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row; /* Alterado para row */
+}
+
+.login-div-conteudo-direito {
+  margin: 5%;
+  width: 90%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.login-div-conteudo-esquerdo {
+  bottom: 10%;
+  position: relative;
+  width: 60%;
+  height: 67%;
+  background-color: rgb(255, 247, 210);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column; /* Adicionado */
+  border-radius: 35px;
+  z-index: 1;
+}
+
+.login-img-pikachu {
+  width: 60%;
+}
+
+.login-label {
+  display: block;
+  color: black;
+  margin-bottom: 1%;
+  font-family: 'Chakra Petch', Courier, monospace;
+  font-weight: 700;
+}
+
+.login-input {
+  font-family: 'Chakra Petch', Courier, monospace;
+  font-weight: 300;
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  border: 4px solid black;
+  font-size: 120%;
+  width: 62.7%;
+  height: 15.68%;
+}
+
+.login-img-logo-pokedex {
+  width: 40%;
+  position: absolute;
+  bottom: 86%;
+  z-index: 2;
+}
+
+.login-div-btn {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 71.64%;
+  height: 60%;
+  margin: 2%;
+}
+
+.login-div-btn button {
+  width: 100%;
+}
+
+/* Estilos para telas entre 4000px e 4500px de largura */
+@media screen and (min-width: 5000px) and (max-width: 6000px) {
+
+  .login-div-tudo-esquerdo {
+    width: 80%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-form {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 1%;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 130px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 4px solid black;
+    font-size: 420%;
+    width: 62.7%;
+    height: 15.68%;
+  }
+
+  .login-div-btn button {
+    width: 100%;
+    height: 120px;
+    font-size: 60px;
+  }
+
+  .login-div-btn h4 {
+    font-size: 50px;
+  }
+
+}
+
+/* Estilos para telas entre 4000px e 4500px de largura */
+@media screen and (min-width: 4000px) and (max-width: 5000px) {
+
+  .login-div-tudo-esquerdo {
+    width: 80%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-form {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 1%;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 100px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 4px solid black;
+    font-size: 420%;
+    width: 62.7%;
+    height: 15.68%;
+  }
+
+  .login-div-btn button {
+    width: 100%;
+    height: 120px;
+    font-size: 60px;
+  }
+
+  .login-div-btn h4 {
+    font-size: 45px;
+  }
+
+}
+
+/* Estilos para telas entre 3500px e 4000px de largura */
+@media screen and (min-width: 3500px) and (max-width: 4000px) {
+    
+  .login-div-tudo-esquerdo {
+    width: 80%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-form {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 1%;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 100px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 4px solid black;
+    font-size: 420%;
+    width: 62.7%;
+    height: 15.68%;
+  }
+
+  .login-div-btn button {
+    width: 100%;
+    height: 120px;
+    font-size: 60px;
+  }
+
+  .login-div-btn h4 {
+    font-size: 45px;
+  }
+
+}
+
+/* Estilos para telas entre 3000px e 3500px de largura */
+@media screen and (min-width: 3000px) and (max-width: 3500px) {
+    
+  .login-div-tudo-esquerdo {
+    width: 80%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-form {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 1%;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 60px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 4px solid black;
+    font-size: 320%;
+    width: 62.7%;
+    height: 15.68%;
+  }
+
+  .login-div-btn button {
+    width: 100%;
+    height: 120px;
+    font-size: 60px;
+  }
+
+  .login-div-btn h4 {
+    font-size: 40px;
+  }
+
+}
+
+/* Estilos para telas entre 2500px e 3000px de largura */
+@media screen and (min-width: 2500px) and (max-width: 3000px) {
+    
+  .login-div-tudo-esquerdo {
+    width: 80%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-form {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 1%;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 4px solid black;
+    font-size: 270%;
+    width: 62.7%;
+    height: 15.68%;
+  }
+
+  .login-div-btn button {
+    width: 100%;
+    height: 90px;
+    font-size: 50px;
+  }
+
+  .login-div-btn h4 {
+    font-size: 30px;
+  }
+
+}
+
+/* Estilos para telas entre 2000px e 2500px de largura */
+@media screen and (min-width: 2000px) and (max-width: 2500px) {
+    
+  .login-div-tudo-esquerdo {
+    width: 80%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-form {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 1%;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 4px solid black;
+    font-size: 270%;
+    width: 62.7%;
+    height: 15.68%;
+  }
+
+  .login-div-btn button {
+    width: 100%;
+    height: 70px;
+    font-size: 50px;
+  }
+
+  .login-div-btn h4 {
+    font-size: 24px;
+  }
+
+}
+
+/* Estilos para telas entre 1540px e 2000px de largura */
+@media screen and (min-width: 1540px) and (max-width: 2000px) {
+  
+  .login-div-tudo-esquerdo {
+    width: 80%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-div-form {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-label {
+    display: block;
+    color: black;
+    margin-bottom: 1%;
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 700;
+    font-size: 40px;
+  }
+  
+  .login-input {
+    font-family: 'Chakra Petch', Courier, monospace;
+    font-weight: 300;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    border: 4px solid black;
+    font-size: 270%;
+    width: 62.7%;
+    height: 15.68%;
+  }
+
+  .login-div-btn button {
+    width: 100%;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .login-div-btn h4 {
+    font-size: 18px;
+  }
+
+}
+
+/* Estilos para telas entre 1600px e 1200px de largura */
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    
+}
+
+/* Estilos para telas entre 850px e 1000px de largura */
+@media screen and (min-width: 850px) and (max-width: 1000px) {
+    
+}
+
+/* Estilos para telas entre 650px e 850px de largura */
+@media screen and (min-width: 650px) and (max-width: 850px) {
+    
+}
+
+/* Estilos para telas entre 500px e 650px de largura */
+@media screen and (min-width: 500px) and (max-width: 650px) {
+
+}
+
+/* Estilos para telas entre 320px e 500px de largura */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    
+}
+
+/* Estilos para telas entre 0px e 320px de largura */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    
+}
+
