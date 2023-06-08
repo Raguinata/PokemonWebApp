@@ -16,7 +16,22 @@ function Login() {
             username: username,
             password: password,
         };
-
+        axios.post('http://127.0.0.1:8000/api/login/', userData)
+        .then(response => {
+            // Verifique a resposta da API e tome ação com base nela
+            if (response.data.success) {
+                // Lógica para lidar com o login bem-sucedido
+                window.location.href = '/';
+            } else {
+                // Lógica para lidar com o login mal-sucedido
+                setErrorMessage(response.data.message);
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            // Lógica para lidar com erros na solicitação
+            setErrorMessage('Ocorreu um erro durante o login.');
+        });
     };
 
     return (
@@ -30,10 +45,7 @@ function Login() {
             <img className='login login-img-logo-pokedex' src={logoPokedex} alt="Pikachu Login" />
                 <div className='login login-div-conteudo-esquerdo'>
                     <div className='login login-div-tudo-esquerdo'>
-                
-                    <form className='login login-div-form' onSubmit={handleSubmit}>
-                        
-                        
+                        <form className='login login-div-form' onSubmit={handleSubmit}>
                             <label className='login login-label' htmlFor="username">Username</label>
                             <input
                                 className='login login-input'
@@ -42,8 +54,6 @@ function Login() {
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                             />
-                        
-                        
                             <label className='login login-label' htmlFor="password">Senha</label>
                             <input
                                 className='login login-input'
@@ -53,18 +63,17 @@ function Login() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                        
-                        <div className='login login-div-btn'>
-                        <button type="submit" className="btn-paginas">Login</button>
-                        
-                        <a href='/alterarSenha'>
-                            <h4 style={{ cursor: "pointer" }}>Esqueci minha senha</h4>
-                        </a>
-                        <a href='/cadastro'>
-                            <h4 style={{ cursor: "pointer" }}>Ainda não possuo uma conta</h4>
-                        </a>
-                        </div>
-                    </form>
+                            <div className='login login-div-btn'>
+                                <button type="submit" className="btn-paginas">Login</button>
+                                {errorMessage && <p className="error-message">{errorMessage}</p>}
+                                <a href='/alterarSenha'>
+                                    <h4 style={{ cursor: "pointer" }}>Esqueci minha senha</h4>
+                                </a>
+                                <a href='/cadastro'>
+                                    <h4 style={{ cursor: "pointer" }}>Ainda não possuo uma conta</h4>
+                                </a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

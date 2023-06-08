@@ -1,3 +1,4 @@
+from flask import redirect
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -30,3 +31,19 @@ def cadastrar(request):
         return Response({'account_id': account.id, 'message': 'Usuário cadastrado com sucesso!'}, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['POST'])
+def login_view(request):
+    username = request.data.get('username')
+    password = request.data.get('password')
+
+    try:
+        account = Account.objects.get(username=username)
+    except Account.DoesNotExist:
+        return Response({'success': False, 'message': 'Username ou Senha incorretos.'})
+
+    if account.password == password:
+        # Realizar login
+        request.session['account_id'] = account.id
+        return Response({'success': True})
+    else:
+        return Response({'success': False, 'message': 'Username ou Senha incorretos.'})
