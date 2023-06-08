@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import '../CSS/Login.css';
 import pokemonLogin from '../../components/Imagens/PikachuLogin.gif';
-import logoPokedex from '../../components/Imagens/logoPokedex.png'
+import logoPokedex from '../../components/Imagens/logoPokedex.png';
+import axios from 'axios';
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Lógica para autenticação do usuário
+
+        const userData = {
+            username: username,
+            password: password,
+        };
+
     };
 
     return (
@@ -42,12 +49,14 @@ function Login() {
                                 className='login login-input'
                                 type="password"
                                 id="password"
+                                autoComplete="new-password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         
                         <div className='login login-div-btn'>
                         <button type="submit" className="btn-paginas">Login</button>
+                        
                         <a href='/alterarSenha'>
                             <h4 style={{ cursor: "pointer" }}>Esqueci minha senha</h4>
                         </a>
