@@ -1,11 +1,9 @@
-from flask import redirect
+
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import AccountSerializer
 from .models import Account
-from django.contrib.auth import login, authenticate
-
 
 @api_view(['GET'])
 def verificar_duplicidade(request):
@@ -47,3 +45,22 @@ def login_view(request):
         return Response({'success': True})
     else:
         return Response({'success': False, 'message': 'Username ou Senha incorretos.'})
+    
+@api_view(['POST'])
+def alterar_senha(request):
+    email = request.data.get('email')
+    password = request.data.get('password')
+    password2 = request.data.get('password2')
+
+    try:
+        account = Account.objects.get(email=email)
+    except Account.DoesNotExist:
+        return Response({'message': 'Esse email não consta no sistema.'}, status=status.HTTP_404_NOT_FOUND)
+
+    if password != password2:
+        return Response({'message': 'As senhas não condizem.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    account.password = password
+    account.save()
+
+    return Response({'message': 'Senha atualizada com sucesso.'}, status=status.HTTP_200_OK)

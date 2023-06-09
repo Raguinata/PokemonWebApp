@@ -69,7 +69,7 @@ export default function Navbar({ pokemonFiltro, esconderPesquisa }) {
                             <a href='/pokemons'>
                                 <button className='navbar navbar-btn' type="submit">Pokémons</button>
                             </a>
-                            <a href='/pokemons'>
+                            <a href='/minhaColecao'>
                                 <button className='navbar navbar-btn' type="submit">Minha Coleção</button>
                             </a>
                         </Box>

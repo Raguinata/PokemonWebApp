@@ -2,15 +2,37 @@ import React, { useState } from 'react';
 import '../CSS/AltSenha.css';
 import altSenhaGif from '../../components/Imagens/AltSenhaGif.gif'
 import logoPokedex from '../../components/Imagens/logoPokedex.png';
+import axios from 'axios';
 
 function AltSenha() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [password2, setPassword2] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Lógica para autenticação do usuário
+
+        const userData = {
+            email: email,
+            password: password,
+            password2: password2
+        };
+
+        axios.post('http://127.0.0.1:8000/api/alterar-senha/', userData)
+            .then(response => {
+                // Senha alterada com sucesso
+                console.log(response.data.message);
+                setErrorMessage('');
+            })
+            .catch(error => {
+                // Erro ao alterar a senha
+                if (error.response && error.response.data && error.response.data.message) {
+                    setErrorMessage(error.response.data.message);
+                } else {
+                    setErrorMessage('Ocorreu um erro ao processar a solicitação.');
+                }
+            });
     };
 
     return (
@@ -39,6 +61,7 @@ function AltSenha() {
                             <input
                                 className='altSenha altSenha-input'
                                 type="password"
+                                autoComplete="new-password"
                                 id="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
@@ -54,6 +77,7 @@ function AltSenha() {
                                 onChange={(e) => setPassword2(e.target.value)}
                             />
                         </div>
+                        {errorMessage && <p className="error-message">{errorMessage}</p>}
                         <button className='btn-paginas' type="submit">Alterar</button>
                     </form>
                 </div>
