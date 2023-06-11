@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import PokemonCard from '../components/PokemonCard'
 import { Box, Container, Grid, Skeleton } from '@mui/material'
 import axios from 'axios'
-import { Skeletons } from '../components/Skeletons/indes';
+import { Skeletons } from '../components/Skeletons';
 import { useNavigate } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -18,7 +18,7 @@ export const Pokemons = ({ setPokemonData }) => {
 
   const getPokemons = () => {
     var endpoints = [];
-    for (var i = 1; i < 12; i++){
+    for (var i = 1; i < 13; i++){
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
     }
     axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));

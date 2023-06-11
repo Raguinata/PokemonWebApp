@@ -8,6 +8,7 @@ import Login from '../pages/Login/Login'
 import Cadastro from '../pages/Cadastro/Cadastro'
 import Erro from '../pages/Erro/Erro'
 import AltSenha from '../pages/AltSenha/AltSenha'
+import MinhaColecao from '../pages/MinhaColecao/MinhaColecao'
 import store from '../store'
 
 export const Router = () => {
@@ -23,6 +24,7 @@ export const Router = () => {
         <Route path='/alterarSenha' element={<AltSenha/>} />
         <Route path='/pokemons' element={<Pokemons setPokemonData={setPokemonData}/>} />
         <Route path='/perfilPokemon' element={<PerfilPokemon pokemonData={pokemonData}/>} />
+        <Route path='/minhaColecao' element={<MinhaColecao pokemonData={pokemonData}/>} />
       </Routes>
     </BrowserRouter>
     </Provider>

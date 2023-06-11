@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import './style.css'; // Importando o arquivo de estilos CSS
+import './style.css';
 import { tipos } from '../../utils';
 import CoracaoV from '../Imagens/CoracaoV.png';
 import CoracaoC from '../Imagens/CoracaoC.png';
+import { useDispatch } from 'react-redux';
+import { addCard, addToCollection } from '../../store/index';
 
 export default function PokemonCard({ name, image, types }) {
-  const [isHovered, setIsHovered] = useState(false); // Estado para controlar o hover
-  const [isClicked, setIsClicked] = useState(false); // Estado para controlar o clique no coração
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  const dispatch = useDispatch();
 
-  const nomeMaiusculo = name.charAt(0).toUpperCase() + name.slice(1); // Transforma a primeira letra do nome em maiúscula
+  const nomeMaiusculo = name.charAt(0).toUpperCase() + name.slice(1);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -19,8 +22,12 @@ export default function PokemonCard({ name, image, types }) {
   };
 
   const handleHeartClick = (event) => {
-    event.stopPropagation(); // Impede que o clique se propague para a div pai
+    event.stopPropagation();
     setIsClicked(!isClicked);
+
+    const card = { name, image, types };
+    dispatch(addCard(card));
+    dispatch(addToCollection(card));
   };
 
   return (
