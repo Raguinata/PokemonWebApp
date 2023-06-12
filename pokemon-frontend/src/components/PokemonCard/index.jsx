@@ -3,13 +3,14 @@ import './style.css';
 import { tipos } from '../../utils';
 import CoracaoV from '../Imagens/CoracaoV.png';
 import CoracaoC from '../Imagens/CoracaoC.png';
-import { useDispatch } from 'react-redux';
-import { addCard, addToCollection } from '../../store/index';
+import { useDispatch, useSelector } from 'react-redux';
+import { addCard, addToCollection, removeFromCollection } from '../../store/index';
 
 export default function PokemonCard({ name, image, types }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
   const dispatch = useDispatch();
+  const collection = useSelector((state) => state.collection);
+  const isCollected = collection.some((pokemon) => pokemon.name === name);
 
   const nomeMaiusculo = name.charAt(0).toUpperCase() + name.slice(1);
 
@@ -23,11 +24,13 @@ export default function PokemonCard({ name, image, types }) {
 
   const handleHeartClick = (event) => {
     event.stopPropagation();
-    setIsClicked(!isClicked);
-
-    const card = { name, image, types };
-    dispatch(addCard(card));
-    dispatch(addToCollection(card));
+    if (isCollected) {
+      dispatch(removeFromCollection(name));
+    } else {
+      const card = { name, image, types };
+      dispatch(addCard(card));
+      dispatch(addToCollection(card));
+    }
   };
 
   return (
@@ -38,7 +41,7 @@ export default function PokemonCard({ name, image, types }) {
     >
       <div className="pokemon-card-div-btn-img">
         <img
-          src={isClicked ? CoracaoC : CoracaoV}
+          src={isCollected ? CoracaoC : CoracaoV}
           className="pokemon-card-btn-img"
           onClick={handleHeartClick}
         />

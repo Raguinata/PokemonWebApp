@@ -16,6 +16,14 @@ export const addToCollection = (card) => {
   };
 };
 
+// Ação para remover um card da coleção
+export const removeFromCollection = (name) => {
+  return {
+    type: 'REMOVE_FROM_COLLECTION',
+    payload: name
+  };
+};
+
 // Ação para salvar a coleção no localStorage
 export const saveCollection = (collection) => {
   localStorage.setItem('collection', JSON.stringify(collection));
@@ -57,6 +65,15 @@ const reducer = (state = initialState, action) => {
           collection: updatedCollection
         };
       }
+    case 'REMOVE_FROM_COLLECTION':
+      const updatedCollection = state.collection.filter(
+        (item) => item.name !== action.payload
+      );
+      saveCollection(updatedCollection); // Salvar a coleção atualizada
+      return {
+        ...state,
+        collection: updatedCollection
+      };
     case 'LOAD_COLLECTION':
       return {
         ...state,

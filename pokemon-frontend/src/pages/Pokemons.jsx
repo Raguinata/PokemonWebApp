@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 export const Pokemons = ({ setPokemonData }) => {
+  //localStorage.clear();
   const [pokemons, setPokemons] = useState([]);
   const navigate = useNavigate();
   
