@@ -4,6 +4,7 @@ import pokemonLogin from '../../components/Imagens/PikachuLogin.gif';
 import logoPokedex from '../../components/Imagens/logoPokedex.png';
 import axios from 'axios';
 
+
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -18,18 +19,18 @@ function Login() {
         };
         axios.post('http://127.0.0.1:8000/api/login/', userData)
         .then(response => {
-            // Verifique a resposta da API e tome ação com base nela
             if (response.data.success) {
-                // Lógica para lidar com o login bem-sucedido
+                // Armazenar o token no localStorage
+                localStorage.setItem('token', response.data.token);
+
+                // Redirecionar para a página principal
                 window.location.href = '/';
             } else {
-                // Lógica para lidar com o login mal-sucedido
                 setErrorMessage(response.data.message);
             }
         })
         .catch(error => {
             console.error(error);
-            // Lógica para lidar com erros na solicitação
             setErrorMessage('Ocorreu um erro durante o login.');
         });
     };

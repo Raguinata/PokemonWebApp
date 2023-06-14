@@ -8,6 +8,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import PokemonLogo from './Imagens/LogoPokemon.png'
 import { Avatar, Button, IconButton, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const settings = ['Perfil', 'Conta', 'Sair'];
 
@@ -131,9 +132,17 @@ export default function Navbar({ pokemonFiltro, esconderPesquisa }) {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
+                                setting === 'Conta' ? (
+                                    <MenuItem key={setting}>
+                                        <Link to="/conta" onClick={handleCloseUserMenu}>
+                                            <Typography textAlign="center">{setting}</Typography>
+                                        </Link>
+                                    </MenuItem>
+                                ) : (
+                                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                        <Typography textAlign="center">{setting}</Typography>
+                                    </MenuItem>
+                                )
                             ))}
                         </Menu>
                     </Box>

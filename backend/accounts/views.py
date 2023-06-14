@@ -4,6 +4,18 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import AccountSerializer
 from .models import Account
+import random
+import string
+from .models import AuthToken
+from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+
+class ProtectedResourceView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        # Lógica para o endpoint protegido
+        return Response({'message': 'Este é um recurso protegido.'})
 
 @api_view(['GET'])
 def verificar_duplicidade(request):
@@ -40,9 +52,14 @@ def login_view(request):
         return Response({'success': False, 'message': 'Username ou Senha incorretos.'})
 
     if account.password == password:
-        # Realizar login
-        request.session['account_id'] = account.id
-        return Response({'success': True})
+        # Gerar um token de autenticação
+        token = ''.join(random.choices(string.ascii_letters + string.digits, k=32))
+
+        # Salvar o token no banco de dados
+        auth_token = AuthToken.objects.create(user=account, token=token)
+
+        # Retornar o token na resposta
+        return Response({'success': True, 'token': token})
     else:
         return Response({'success': False, 'message': 'Username ou Senha incorretos.'})
     
