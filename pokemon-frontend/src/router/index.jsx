@@ -18,9 +18,9 @@ export const Router = () => {
     <Provider store={store}>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>} />
+        <Route path='/home' element={<Home/>} />
         <Route path='/*' element={<Erro />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Login />} />
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/alterarSenha' element={<AltSenha/>} />
         <Route path='/pokemons' element={<Pokemons setPokemonData={setPokemonData}/>} />

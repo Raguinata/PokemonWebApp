@@ -24,7 +24,7 @@ function Login() {
                 localStorage.setItem('token', response.data.token);
 
                 // Redirecionar para a página principal
-                window.location.href = '/';
+                window.location.href = '/home';
             } else {
                 setErrorMessage(response.data.message);
             }
